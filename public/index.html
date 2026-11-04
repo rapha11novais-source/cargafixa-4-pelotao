@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conferência individual de carga fixa de pistola, placa de colete e validade da ACAF.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#293c33">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Carga Fixa · Conferência individual</title>
+  <script defer src="config.js"></script>
+  <script defer src="regras.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o formulário</a>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="./" aria-label="Carga Fixa — início"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 8 9 8 9s8-4 8-9V6L12 3Z"/><path d="m8 12 3 3 5-6"/></svg></span><span>CARGA<span class="brand-light">FIXA</span><small>CONFERÊNCIA INDIVIDUAL</small></span></a>
+    <div class="side-body"><p class="eyebrow">SEU CADASTRO, EM DIA</p><h1>Conferir hoje.<br>Manter em dia.</h1><p class="side-copy">Um único formulário para sua carga fixa e a validade da sua autorização.</p>
+    <nav aria-label="Etapas do formulário"><ol class="steps"><li data-nav="0" class="current" aria-current="step"><span class="step-number">01</span><div><strong>Identificação</strong><small>Seus dados funcionais</small></div></li><li data-nav="1"><span class="step-number">02</span><div><strong>Pistola</strong><small>Arma e munições</small></div></li><li data-nav="2"><span class="step-number">03</span><div><strong>Colete</strong><small>Placa e validade</small></div></li><li data-nav="3"><span class="step-number">04</span><div><strong>ACAF</strong><small>Validade e ciência</small></div></li></ol></nav>
+    </div><div class="side-foot"><span class="dot"></span><span>Preenchimento individual<br><small>Tenha seus dados em mãos.</small></span></div>
+  </aside>
+  <main id="conteudo" class="main">
+    <header class="topbar"><span>GESTÃO DE EQUIPAMENTOS</span><span class="edition">CONFERÊNCIA / <b id="ano">2026</b></span></header>
+    <div class="content">
+      <div class="intro"><div class="eyebrow dark">CONFERÊNCIA DE CARGA FIXA</div><h2>Vamos conferir<br>seus equipamentos.</h2><p>Informe o que está sob sua responsabilidade.<br class="desktop"> Você verá apenas os campos que precisa preencher.</p></div>
+      <div id="configAviso" class="notice setup" role="status" hidden><span aria-hidden="true">ⓘ</span><div><strong>Recebimento ainda não ativado</strong><p>Você pode conhecer o formulário. O envio ficará disponível após a conexão com a planilha.</p></div></div>
+      <noscript><p class="notice">Ative o JavaScript do navegador para preencher este formulário.</p></noscript>
+      <div class="form-top"><span id="contador">ETAPA 01 DE 04</span><span class="required-note">* Campos obrigatórios</span></div>
+      <div class="progress" aria-hidden="true"><span id="barra"></span></div>
+      <form id="formulario" method="post" target="_blank" rel="noopener noreferrer" accept-charset="UTF-8">
+        <input type="hidden" name="protocolo" id="protocolo">
+        <label class="honeypot" aria-hidden="true">Deixe este campo vazio<input name="website" tabindex="-1" autocomplete="off"></label>
+        <section class="panel" data-step="0" aria-labelledby="titulo0">
+          <div class="panel-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg></span><div><h3 id="titulo0" tabindex="-1">Identificação do policial</h3><p>Comece pelos seus dados funcionais.</p></div></div>
+          <label for="nome">Nome completo <span>*</span></label><input id="nome" name="nome" maxlength="150" autocomplete="name" placeholder="Informe seu nome completo" required>
+          <label for="matricula">Matrícula / identificação funcional <span>*</span></label><input id="matricula" name="matricula" maxlength="50" placeholder="Informe sua matrícula" required>
+          <div class="tip"><span aria-hidden="true">↳</span><p>Confira a matrícula antes de continuar. Ela identifica sua conferência na planilha de controle.</p></div>
+        </section>
+        <section class="panel" data-step="1" aria-labelledby="titulo1" hidden>
+          <div class="panel-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 9h8M8 13h8M8 17h5"/></svg></span><div><h3 id="titulo1" tabindex="-1">Pistola e munições</h3><p>Dados da sua carga fixa de armamento.</p></div></div>
+          <fieldset class="question"><legend>Possui carga fixa de pistola? <span>*</span></legend><div class="choices"><label><input type="radio" name="pistola" value="Sim" required><span>Sim, possuo</span></label><label><input type="radio" name="pistola" value="Não" required><span>Não possuo</span></label></div></fieldset>
+          <fieldset id="dadosPistola" class="conditional" disabled hidden>
+            <label for="modelo">Modelo da pistola <span>*</span></label><select id="modelo" name="modelo" required><option value="">Selecione o modelo</option><option>PT100</option><option>PT840</option><option>GLOCK</option></select>
+            <label for="seriePistola">Número de série <span>*</span></label><input id="seriePistola" name="seriePistola" maxlength="100" placeholder="Série da pistola" required>
+            <label for="municoes">Quantidade de munições <span>*</span></label><input id="municoes" name="municoes" type="number" min="0" max="1000000" step="1" inputmode="numeric" placeholder="Ex.: 30" required>
+            <fieldset class="question"><legend>As munições precisam de substituição? <span>*</span></legend><div class="choices"><label><input type="radio" name="substituicao" value="Sim" required><span>Sim</span></label><label><input type="radio" name="substituicao" value="Não" required><span>Não</span></label></div></fieldset>
+          </fieldset>
+        </section>
+        <section class="panel" data-step="2" aria-labelledby="titulo2" hidden>
+          <div class="panel-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h3v4h4V3h3l3 6-2 12H6L4 9l3-6Z"/><path d="M8 12h8M8 16h8"/></svg></span><div><h3 id="titulo2" tabindex="-1">Placa de colete</h3><p>Identificação e validade da proteção.</p></div></div>
+          <fieldset class="question"><legend>Possui carga fixa de placa de colete? <span>*</span></legend><div class="choices"><label><input type="radio" name="colete" value="Sim" required><span>Sim, possuo</span></label><label><input type="radio" name="colete" value="Não" required><span>Não possuo</span></label></div></fieldset>
+          <fieldset id="dadosColete" class="conditional" disabled hidden>
+            <label for="serieColete">Número de série da placa <span>*</span></label><input id="serieColete" name="serieColete" maxlength="150" placeholder="Série da placa de colete" required>
+            <label for="validadeColete">Data de validade da placa <span>*</span></label><input id="validadeColete" name="validadeColete" type="date" min="1900-01-01" max="9998-12-31" required>
+          </fieldset>
+        </section>
+        <section class="panel" data-step="3" aria-labelledby="titulo3" hidden>
+          <div class="panel-heading"><span class="section-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h5m-5 4h8"/></svg></span><div><h3 id="titulo3" tabindex="-1">Validade da ACAF</h3><p>Autorização para Carga de Arma de Fogo.</p></div></div>
+          <label for="acaf">Data de validade da sua ACAF <span>*</span></label><input id="acaf" name="acaf" type="date" min="1900-01-01" max="9998-12-31" required>
+          <div id="situacaoBox" class="notice" aria-live="polite"><span aria-hidden="true">◷</span><div><strong id="situacaoTitulo">Confira sua autorização</strong><p id="situacaoTexto">Informe a validade para verificar a necessidade de renovação.</p></div></div>
+          <fieldset id="cienciaBox" class="acknowledgment" disabled hidden><legend>Ciência obrigatória</legend><label class="check"><input type="checkbox" id="ciencia" name="ciencia" value="true"><span id="termo"></span></label></fieldset>
+          <div class="review"><h4>Antes de enviar</h4><dl id="resumo"></dl></div>
+          <p class="confirmation-note">A confirmação do recebimento será aberta em uma nova aba. Aguarde a mensagem de sucesso e seu protocolo.</p>
+        </section>
+        <p id="mensagem" class="message" role="status" aria-live="polite"></p>
+        <div class="actions"><button type="button" id="voltar" class="button secondary" hidden>← Voltar</button><span id="autosaveNote" class="action-note">Os dados são enviados somente ao finalizar.</span><button type="button" id="continuar" class="button primary">Continuar <span aria-hidden="true">↗</span></button><button type="submit" id="enviar" class="button primary" hidden>Enviar conferência <span aria-hidden="true">↗</span></button></div>
+      </form>
+      <footer><span>CARGA FIXA <b>·</b> CONFERÊNCIA INDIVIDUAL</span><p>ACAF: verificação em dois meses de calendário, pelo horário de São Paulo.</p></footer>
+    </div>
+  </main>
+</div>
+</body></html>

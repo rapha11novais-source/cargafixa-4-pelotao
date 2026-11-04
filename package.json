@@ -1,0 +1,8 @@
+{
+  "name": "carga-fixa-acaf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plataforma independente de conferência de carga fixa e ACAF",
+  "scripts": {"build": "node montar.cjs", "test": "node tests/verificar.cjs", "start": "node preview.cjs"},
+  "engines": {"node": ">=18"}
+}
