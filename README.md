@@ -1,4 +1,6 @@
-# Carga Fixa · Conferência individual
+# Carga Fixa · 4º Pelotão
+
+Endereço público: https://rapha11novais-source.github.io/cargafixa-4-pelotao/
 
 Plataforma nova e independente, com formulário em quatro etapas e integração ao Google Sheets. Não depende das outras plataformas do usuário nem altera seus repositórios.
 

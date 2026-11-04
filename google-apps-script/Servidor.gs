@@ -2,7 +2,7 @@
 const CARGA = Object.freeze({
   aba: 'Conferências', fuso: 'America/Sao_Paulo',
   versaoTermo: '2026-11-04-v1',
-  site: 'https://rapha11novais-source.github.io/carga-fixa-acaf/'
+  site: 'https://rapha11novais-source.github.io/cargafixa-4-pelotao/'
 });
 const CABECALHO = ['Protocolo', 'Registrado em', 'Nome completo', 'Matrícula', 'Carga fixa de pistola', 'Modelo', 'Série da pistola', 'Quantidade de munições', 'Necessita substituição', 'Carga fixa de placa de colete', 'Série da placa', 'Validade da placa', 'Validade da ACAF', 'Situação da ACAF no envio', 'Ciência de renovação e sanções', 'Texto da ciência', 'Versão do termo', 'Data de referência', 'Resumo de integridade'];
 
