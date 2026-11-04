@@ -21,7 +21,7 @@ function instalar() {
     let aba = planilha.getSheetByName(CARGA.aba);
     if (!aba) aba = planilha.insertSheet(CARGA.aba);
     if (aba.getLastRow() === 0) {
-      aba.getRange(1, 1, 1, CABECALHO.length).setValues([CABECALHO]).setBackground('#293c33').setFontColor('#ffffff').setFontWeight('bold');
+      aba.getRange(1, 1, 1, CABECALHO.length).setValues([CABECALHO]).setBackground('#152a45').setFontColor('#ffffff').setFontWeight('bold');
       aba.setFrozenRows(1); aba.autoResizeColumns(1, CABECALHO.length);
     }
     conferirCabecalho_(aba);
@@ -92,6 +92,6 @@ function conferirCabecalho_(aba) {
 
 function pagina_(titulo, mensagem, sucesso, protocolo) {
   const escapar = v => String(v).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const html = '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><base target="_top"><style>body{margin:0;padding:60px 22px;background:#f7f7f2;color:#25352e;font:16px/1.7 system-ui,sans-serif}main{max-width:520px;margin:auto;background:white;padding:34px;border:1px solid #dedfd6;border-radius:16px;border-top:6px solid '+(sucesso?'#76945d':'#b08a48')+'}small{letter-spacing:2px;color:#6d7b5c}h1{font-size:28px;line-height:1.25}p{color:#6b7467}.protocolo{background:#eff4e7;padding:16px;font:14px/1.8 monospace;overflow-wrap:anywhere}a{color:#293c33}footer{font-size:12px;color:#7b8475}</style></head><body><main><small>CARGA FIXA · CONFERÊNCIA INDIVIDUAL</small><h1>'+escapar(titulo)+'</h1><p>'+escapar(mensagem)+'</p>'+(protocolo?'<div class="protocolo"><strong>Protocolo</strong><br>'+escapar(protocolo)+'</div>':'')+'<p>Você pode fechar esta aba e voltar à aba do formulário.</p><footer><a rel="noreferrer" href="'+escapar(CARGA.site)+'">Abrir uma nova conferência</a></footer></main></body></html>';
+  const html = '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><base target="_top"><style>body{margin:0;padding:60px 22px;background:#f3f5f9;color:#1c2e45;font:16px/1.7 system-ui,sans-serif}main{max-width:520px;margin:auto;background:white;padding:34px;border:1px solid #e2e7ef;border-radius:16px;border-top:6px solid '+(sucesso?'#b99a58':'#b08a48')+'}small{letter-spacing:2px;color:#8b7450}h1{font-size:28px;line-height:1.25}p{color:#6c7a8e}.protocolo{background:#edf3f9;padding:16px;font:14px/1.8 monospace;overflow-wrap:anywhere}a{color:#152a45}footer{font-size:12px;color:#8392a7}</style></head><body><main><small>4º PELOTÃO · 80ª CIPM</small><h1>'+escapar(titulo)+'</h1><p>'+escapar(mensagem)+'</p>'+(protocolo?'<div class="protocolo"><strong>Protocolo</strong><br>'+escapar(protocolo)+'</div>':'')+'<p>Você pode fechar esta aba e voltar à aba do formulário.</p><footer><a rel="noreferrer" href="'+escapar(CARGA.site)+'">Abrir uma nova conferência</a></footer></main></body></html>';
   return HtmlService.createHtmlOutput(html).setTitle(titulo).addMetaTag('viewport', 'width=device-width, initial-scale=1');
 }

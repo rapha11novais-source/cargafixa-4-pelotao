@@ -2,6 +2,8 @@
 
 Plataforma nova e independente, com formulário em quatro etapas e integração ao Google Sheets. Não depende das outras plataformas do usuário nem altera seus repositórios.
 
+A identidade visual usa o brasão do 4º Pelotão — 80ª CIPM e a paleta azul-marinho/dourado dos projetos anteriores do usuário. O brasão foi reaproveitado do arquivo original do projeto de gestão, com redução de resolução apenas para carregamento na página.
+
 ## Funcionamento
 
 - Identificação por nome e matrícula.
@@ -14,7 +16,9 @@ Plataforma nova e independente, com formulário em quatro etapas e integração 
 
 ## Ativar Google Sheets
 
-1. Crie um novo projeto em [Google Apps Script](https://script.google.com/home/start).
+O projeto Google desta plataforma já está preparado: [Carga Fixa · Conector Google Sheets](https://script.google.com/home/projects/1pIFiQIdXeqXVz9-qyFX4jWseggy77vZ_D95ykrte5_OcKyDd0C1_IQSe/edit). Para ativá-lo, comece pelo passo 3. Os passos 1–2 servem apenas para instalar uma cópia independente.
+
+1. Para uma cópia independente, crie um novo projeto em [Google Apps Script](https://script.google.com/home/start).
 2. Substitua o conteúdo de Código.gs pelo arquivo [google-apps-script/Code.gs](google-apps-script/Code.gs). Ele já inclui todas as regras; não é necessário copiar outros arquivos de código.
 3. Selecione a função `instalar`, execute e revise a autorização de acesso ao Google Sheets. Será criada uma planilha nova chamada **Carga Fixa — Conferências e ACAF**. Executar novamente reutiliza a mesma planilha; não apaga registros. O link da planilha aparece no registro de execução.
 4. Clique em **Implantar → Nova implantação → App da Web**. Execute como o proprietário. Escolha quem poderá enviar conforme o público autorizado pela unidade; com Google Workspace, prefira o domínio institucional. Em conta pessoal, as opções podem ser mais amplas. A planilha continua privada, sem compartilhamento automático.
